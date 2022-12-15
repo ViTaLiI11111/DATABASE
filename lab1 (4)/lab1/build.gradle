@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation group: 'org.testng', name: 'testng', version: '7.6.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.4'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml', version: '2.13.4'
+    // https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.4'
+    implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+    // https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+    implementation group: 'org.hibernate.validator', name: 'hibernate-validator', version: '8.0.0.Final'
+    // https://mvnrepository.com/artifact/org.glassfish.expressly/expressly
+    implementation group: 'org.glassfish.expressly', name: 'expressly', version: '5.0.0'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.31'
+
+}
+
+test {
+    useJUnitPlatform()
+}
